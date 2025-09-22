@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-heading: "Sen", sans-serif;
+  --primary-color: #ffb900;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Barlow", sans-serif;
+}
+
+.main-content {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(100% - 48px);
+}
+
+a {
+  text-decoration: none;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  padding: 8px 21px;
+  position: relative;
+}
+
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  text-shadow: 1px 0 0 currentcolor;
+}
+
+.nav li.active a::after {
+  display: block;
+  content: "";
+  width: 12px;
+  height: 2px;
+  left: 21px;
+  bottom: 6px;
+  border-radius: 1px;
+  /* Vì active là thẻ inline nên kh sét dc w,h */
+  position: absolute;
+  background: #171100;
+}
+
+.body-header {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.nav ul {
+  display: flex;
+}
+
+nav {
+  margin-left: auto;
+}
+
+.btn {
+  /* vì thẻ a là inline nên nd nó sẽ chạm viền nên => */
+  display: block;
+  min-width: 118px;
+  font-weight: 600px;
+  font-size: 1.6rem;
+  padding: 0 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #171100;
+  border-radius: 999px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.header .btn-sign-up {
+  min-width: 144px;
+}
+
+.header {
+  background: #fffcf4;
+}
+
+.header-fixed {
+  z-index:1;
+  position: sticky;
+  top: -8px;
+}
+
+.header .action {
+  margin-left: 48px;
+}
+
+.hero {
+  padding: 56px 0 65px;
+  background: #fffcf4;
+}
+
+.hero .body {
+  display: flex;
+}
+
+/* hero left width:570
+ tổng thiết kế main-content width:1170
+ 
+ ==>570 / 1170 = 0.48 -> là width của hero left*/
+
+.hero .content-box {
+  width: 52%;
+}
+
+.hero .media-block {
+  width: 48%;
+  position: relative;
+}
+
+/* thêm kích cỡ mặc định của hiện tại
+ tránh việc khi sao chép địa chỉ ảnh trên mạng thêm vào
+ kh phù hợp với kích thước */
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+
+  /* Kh lm vỡ ảnh */
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero .hero-summary {
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 00.5);
+  width: 270px;
+  padding: 24px;
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+
+/* ==> tác động vào class item nằm đằng sau 1 class item khác */
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  background: #fff9e8;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-summary .icon2 {
+  background: #fcefff;
+}
+
+.hero-summary .icon3 {
+  background: #ebeaff;
+}
+
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  font-size: 1.4rem;
+  color: #5f5b53;
+  line-height: 1.86;
+}
+
+.hero-summary .title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.66;
+}
+
+/* =============hero right================= */
+.hero .content-box {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+
+.hero .heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -1.16%;
+  color: #171100;
+}
+
+.hero .desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.btn-play {
+  min-width: 180px;
+  background-color: var(--primary-color);
+  line-height: 64px;
+}
+
+.hero .cta-group {
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+}
+
+.hero .watch-video {
+  border: none;
+  background: transparent;
+  display: flex;
+  margin-left: 28px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hero .watch-video .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 00.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+
+.hero .watch-video span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.hero .desc-recent {
+  margin-top: 48px;
+}
+
+.hero .stats{
+  margin-top: 8px;
+}
+
+.hero .stats strong {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 4.4rem;
+  color: #171100;
+  line-height: 1.23;
+  letter-spacing: 0%;
+  margin-right: 15px;
+}
+
+.hero .stats strong:nth-child(2){
+  margin-left: 28px;
+}
