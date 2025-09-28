@@ -430,8 +430,18 @@ nav {
   background: #2e2100;
 }
 
+.feedback-list {
+  display: flex;
+}
+
 .feedback-item {
   display: flex;
+
+  /* Đây là của item nên phải code trong item */
+  flex-shrink: 0;
+  width: 100%;
+  /* transform:translateX(-100%);
+  transition:all ease .5s */
 }
 
 .feedback-item .avatar {
@@ -471,7 +481,7 @@ nav {
   cursor: pointer;
 }
 
-.feedback-item .dot.active{
+.feedback-item .dot.active {
   background: var(--primary-color);
   cursor: default;
 }
@@ -481,9 +491,80 @@ nav {
   margin-left: auto;
 }
 
-.feedback-item blockquote{
-font-style: Italic;
-font-size: 2.6rem;
-line-height: 1.54;
-color: #FFFFFF;
+.feedback-item blockquote {
+  font-style: Italic;
+  font-size: 2.6rem;
+  line-height: 1.54;
+  color: #ffffff;
+}
+
+/* =====================features 1===================== */
+
+.features {
+  margin-top: 135px;
+  padding: 65px 0;
+}
+
+.features .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .images {
+  display: flex;
+  gap: 30px;
+}
+
+.features .images img {
+  width: 270px;
+  height: 405px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.images .lower {
+  margin-top: 34px;
+}
+
+.features .content {
+  /* chiều rộng của bên phải là 470 
+và chiều rộng của main-content là 1170
+==> lấy 470 / 1170 nên ra bên dưới */
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features .heading-lv2 {
+  line-height: 42px;
+}
+
+.features .desc {
+  margin-top: 16px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #5f5b53;
+}
+
+.features .cta-btn {
+  width: 137px;
+  height: 50px;
+  background: var(--primary-color);
+  margin-top: 32px;
+}
+
+/* =====================features 2===================== */
+.features-2nd {
+  margin-top: 70px;
+}
+
+.features-2nd .content {
+  /* 570 / 1170 */
+  width: 495;
+}
+
+.features-2nd .images img {
+  width: 470px;
+  height: 440px;
 }
