@@ -23,12 +23,12 @@ body {
   max-width: calc(100% - 48px);
 }
 
-.line-clamp {
+/* .line-clamp {
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: var(--line-clamp, 1);
   --webkit-box-orient: vertical;
-}
+} */
 
 .line-clamp .line-2 {
   --line-clamp: 2;
@@ -305,6 +305,7 @@ nav {
   width: 458px;
   font-weight: 400;
   font-style: Regular;
+
   font-size: 1.8rem;
   line-height: 1.67;
   color: #5f5b53;
@@ -567,4 +568,216 @@ và chiều rộng của main-content là 1170
 .features-2nd .images img {
   width: 470px;
   height: 440px;
+}
+
+/* =====================blogs====================== */
+.blogs {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #fffcf4;
+}
+
+.blogs .blog-top {
+  text-align: center;
+}
+
+.blogs .blog-top .decs {
+  margin: 16px auto 0;
+  width: 448px;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #696262;
+}
+
+.blogs .blog-top .heading-lv2 {
+  line-height: 48px;
+}
+
+.blogs .blog-list {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.blogs .item {
+  width: calc(33.33% - 20px);
+  border-radius: 16px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.blogs .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 00.5);
+}
+
+.blogs .item .thumb {
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.blogs .item .info {
+  padding: 20px 20px 28px;
+}
+
+.blogs .item .date {
+  position: relative;
+  padding-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.blogs .item .date::before {
+  content: "";
+  margin-right: 4px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.blogs .item .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: -27px;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+
+.blogs .item .title {
+  margin-top: 12px;
+  color: #171100;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.blogs .item .btn {
+  margin-top: 12px;
+  display: inline-block;
+  min-width: 118px;
+  padding: 0 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: #171100;
+}
+
+.blogs .item .btn:hover {
+  background: var(--primary-color);
+}
+
+.blogs .dots {
+  gap: 6px;
+  margin-top: 38px;
+  display: flex;
+  justify-content: center;
+}
+
+.blogs .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+
+.blogs .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+
+/* =====================footer====================== */
+.footer {
+  background: #2e2100;
+  padding: 96px 135px 0px;
+}
+
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column {
+  /* 100 - 35 (của cột1)  / 3 = 21,666 */
+
+  width: 21, 6%;
+}
+
+.footer .row .column:first-child {
+  /* cột 1 đến cột 2 là : 267 + 145 = 412
+  =>412 / 117- = 0,35... */
+
+  width: 35%;
+}
+
+.footer .desc {
+  margin-top: 18px;
+  max-width: 267px;
+  font-size: 1.4rem;
+  letter-spacing: 1.86;
+  color: #bfbcb2;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.footer .title {
+  padding-bottom: 14px;
+  padding-right: 48px;
+  display: inline-block;
+  border-bottom: 1px solid #59554b;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #ffffff;
+}
+
+li {
+  text-decoration: none;
+}
+
+.footer .list a {
+  /* thẻ a là thẻ inline nên kh margin bottom, top dc  */
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #bfbcb2;
+  line-height: 1.86;
+}
+
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+
+.footer .list strong {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #fff;
+}
+
+.footer .copyright {
+  padding: 28px 0;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  text-align: center;
+  color:#807D74;
 }
